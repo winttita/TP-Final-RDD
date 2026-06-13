@@ -1,5 +1,5 @@
 import json
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 
 ###############################################################################################################################################################################################
 # ETAPA 2
@@ -38,5 +38,23 @@ def premio_especifico(year: str, category: str):
         if p["year"] == year and p["category"].lower() == category.lower()
     ]
     if not resultado:
-        return {"error": f"No se encontró el premio de {category} en {year}"}
+        raise HTTPException(status_code=404, detail=f"No se encontró el premio de {category} en {year}")
     return resultado[0]      # Como sabemos que año+categoría es único, devolvemos directamente el primer (y único) elemento en lugar de una lista
+
+# Aqui vamos a usar un parametro de query
+@app.get("/laureados/buscar")
+def buscar_laureado(nombre: str):
+    prizes = cargar_datos()
+    encontrados = []
+    for p in prizes:
+        for lau in p.get("laureates", []):
+            nombre_completo = f"{lau.get('firstname', '')} {lau.get('surname', '')}".lower()
+            if nombre.lower() in nombre_completo:
+                encontrados.append({
+                    "year": p["year"],
+                    "category": p["category"],
+                    "laureado": lau
+                })
+    if not encontrados:
+        raise HTTPException(status_code=404, detail=f"No se encontró ningún laureado con '{nombre}'")
+    return {"total": len(encontrados), "resultados": encontrados}
