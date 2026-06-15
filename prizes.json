@@ -83,33 +83,6 @@
     },
     {
       "year": "2025",
-      "category": "physics",
-      "laureates": [
-        {
-          "id": "1050",
-          "firstname": "John",
-          "surname": "Clarke",
-          "motivation": "\"for the discovery of macroscopic quantum mechanical tunnelling and energy quantisation in an electric circuit\"",
-          "share": "3"
-        },
-        {
-          "id": "1051",
-          "firstname": "Michel H.",
-          "surname": "Devoret",
-          "motivation": "\"for the discovery of macroscopic quantum mechanical tunnelling and energy quantisation in an electric circuit\"",
-          "share": "3"
-        },
-        {
-          "id": "1052",
-          "firstname": "John M.",
-          "surname": "Martinis",
-          "motivation": "\"for the discovery of macroscopic quantum mechanical tunnelling and energy quantisation in an electric circuit\"",
-          "share": "3"
-        }
-      ]
-    },
-    {
-      "year": "2025",
       "category": "medicine",
       "laureates": [
         {
@@ -216,26 +189,6 @@
     },
     {
       "year": "2024",
-      "category": "physics",
-      "laureates": [
-        {
-          "id": "1037",
-          "firstname": "John",
-          "surname": "Hopfield",
-          "motivation": "\"for foundational discoveries and inventions that enable machine learning with artificial neural networks\"",
-          "share": "2"
-        },
-        {
-          "id": "1038",
-          "firstname": "Geoffrey",
-          "surname": "Hinton",
-          "motivation": "\"for foundational discoveries and inventions that enable machine learning with artificial neural networks\"",
-          "share": "2"
-        }
-      ]
-    },
-    {
-      "year": "2024",
       "category": "medicine",
       "laureates": [
         {
@@ -328,7 +281,7 @@
           "id": "1026",
           "firstname": "Pierre",
           "surname": "Agostini",
-          "motivation": "\"for experimental methods that generate attosecond pulses of light for the study of electron dynamics in matter\"",
+          "motivation": "Premio otorgado por métodos experimentales con pulsos de luz de attosegundos",
           "share": "3"
         },
         {
