@@ -152,7 +152,7 @@ def actualizar_motivacion(request: Request, year: str, category: str, laureado_i
         if p["year"] == year and p["category"].lower() == category.lower():
             for lau in p.get("laureates", []):
                 if lau["id"] == laureado_id:
-                    lau["motivation"] = datos.motivation
+                    lau["motivation"] = datos.Smotivation
                     guardar_datos(prizes)
                     return {"mensaje": "Motivación actualizada.", "laureado": lau}
             raise HTTPException(status_code=404, detail=f"Laureado {laureado_id} no encontrado.")

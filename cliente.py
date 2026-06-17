@@ -66,10 +66,35 @@ def main():
             year = input("Año: ")
             category = input("Categoría: ")
             premio_especifico(year, category)
+        
+        elif opcion == "3":
+            nombre = input("Laureado: ")
+            buscar_laureado(nombre)
+        
+        elif opcion == "4":
+            year = input("Año: ")
+            category = input("Categoría: ")
+            agregar_premio(year, category)
+
+        elif opcion == "5":
+            year = input("Año: ")
+            category = input("Categoría: ")
+            id = input("ID del laureado: ")
+            motivacion = input("Nueva motivacion: ")
+            actualizar_motivacion(year, category, id, motivacion)
+
+        elif opcion == "6":
+            year = input("Año: ")
+            category = input("Categoría: ")
+            eliminar_premio(year, category)
 
         elif opcion == "0":
-            print("Chau!")
+            print("\nChau!\n")
             break
 
         else:
-            print("Opción inválida")
+            print("\nOpción inválida")
+
+
+if __name__ == "__main__":
+    main()
