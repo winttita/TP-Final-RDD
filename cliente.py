@@ -2,7 +2,7 @@ import requests
 import json
 from requests.auth import HTTPBasicAuth
 
-BASE_URL = "http://localhost:8000"
+BASE_URL = "http://192.168.100.30:8000"
 AUTH = HTTPBasicAuth("admin", "nobel2024")
 
 def mostrar(response):
